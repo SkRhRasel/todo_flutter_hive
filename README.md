@@ -11,3 +11,15 @@ flutter packages pub run build_runner build
 
 If any conflicts Run this command :
 flutter pub run build_runner build --delete-conflicting-outputs
+
+
+## But before that, you will have to import the generator.
+
+Example: If your file name is project_database.dart, then in that file :
+
+Import,
+
+import 'package:hive/hive.dart';
+part 'project_database.g.dart'; 
+//this will show an error initially but if
+// you run the above command, it will generate the generator file
