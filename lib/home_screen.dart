@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_db/add_todo.dart';
 import 'package:hive_db/todo.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -92,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       icon: const Icon(Icons.delete,color: Colors.red,),
                       onPressed: (){
                          box.deleteAt(index);
-                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Todo deleted Successfully !"),));
+                         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Todo deleted Successfully !"),));
                       },
                     ),
 
@@ -105,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>AddTodo()));
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>const AddTodo()));
         },
       ),
     );

@@ -10,7 +10,7 @@ Run this command :
 flutter packages pub run build_runner build
 
 If any conflicts Run this command :
-flutter pub run build_runner build --delete-conflicting-outputs
+flutter packages pub run build_runner build --delete-conflicting-outputs
 
 
 ## But before that, you will have to import the generator.
